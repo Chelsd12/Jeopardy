@@ -10,7 +10,7 @@ export const getCats = () => {
 export default ( state = [], action ) => {
     switch(action.type) {
       case 'CATS':
-        return action.categories
+        return action.categories;
       case 'ADD_CATS':
         return [action.category, ...state];
       default:

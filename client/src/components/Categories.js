@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Card, Header, Container } from 'semantic-ui-react';
 import { getCats } from '../reducers/categories';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 class App extends Component {
 
@@ -15,6 +15,11 @@ class App extends Component {
       <div>
           <Card key={ category.id }>
             <Card.Content>{category.name}</Card.Content>
+            <Card.Content extra> 
+                <Link to={`/categories/${category.id}`}>
+                    Play Category
+                </Link>
+            </Card.Content>
           </Card>
       </div>
     )
